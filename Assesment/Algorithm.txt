@@ -1,0 +1,19 @@
+Problem Desciption:
+According to the problem stated, the start point is Kiev and the end point is also assumed to be Kiev (with the assumption that my son, as per the problem has started from this place and the probability of him ending at this place is relatively higher)
+Input: Places visited, available tickets for train transportation in Europe
+Output: A cyclic graph where the son visits each city only once with the following path
+Kiev-Prague
+Prague-Zurich
+Zurich-Amsterdam
+Amsterdam-Barcelona
+Barcelona-Berlin
+Berlin-Kiev
+
+Algorithm:
+Step 1: Create a set that has all the places visited
+Step 2: Create a list that contains the places in pair as given in the problem
+Step 3: Compute the distance between each of pair
+Step 4: Consider the starting point as Kiev and find the optimal neighbour from Kiev with minimum distance. Let the nearest neighbour with optimal distance be termed as “Temp”.
+Step 5: Store “Temp” in an array called as marked.
+Step 6: For all the “Temp” values check if it is already present in the array marked. If yes, eliminate the corresponding path. Else, Consider the path as the extending path.
+Step 7: Repeat Step 4 until Kiev is reached again.
